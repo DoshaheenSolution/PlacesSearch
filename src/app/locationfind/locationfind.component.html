@@ -1,0 +1,35 @@
+<!-- Main Toolbar of an App -->  
+<ng-container *ngIf="isBrowser">
+ 
+ <div class="container">
+    <div class="card my-4">
+      <div class="card-header alert-primary">
+          <h2 class="text-center m-0">Search Places in USA</h2>
+      </div>
+      <div class="card-body bg-theme">
+        <input type="text" class="form-control mb-4 in-shadow" (keydown.enter)="$event.preventDefault()" placeholder="Search Places (USA Only)" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search autofocus>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+            <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+              (dragEnd)="markerDragEnd($event)"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+    <div class="card my-4">
+        <div class="card-header alert-success">
+            <h5><b>Address :</b><span class="pl-3">{{address}}</span></h5>
+        </div>
+        <div class="card-body bg-theme">
+          <table class="table m-0">
+              <tbody>
+                  <tr>
+                    <th scope="row">Latitude :</th>
+                    <td>{{latitude}}</td>
+                    <th scope="row">Longitude :</th>
+                    <td>{{longitude}}</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+</ng-container>

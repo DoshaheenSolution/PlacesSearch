@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+.card {
+    font-family: 'Play', sans-serif;
+    font-size: 1rem;
+}
+agm-map {
+    height: 500px;
+}
+.bg-theme {
+    background-color: #f9f9f9;
+}
+.in-shadow {
+    border: 0;
+    outline: 0;
+    line-height: 50px;
+    padding: 0 18px;
+    box-shadow: 0 20px 10px -10px rgba(200, 200, 200, 0.5);
+}
+.table td, .table th {
+    border-top: none;
+}
+.table th {
+    background-color: #212529;
+    color: #f9f9f9;
+    font-weight: 500;
+    border-color: #212529;
+}
+.table td {
+    text-align: center;
+    background-color: #fff;
+}
