@@ -16,16 +16,62 @@ agm-map {
     padding: 0 18px;
     box-shadow: 0 20px 10px -10px rgba(200, 200, 200, 0.5);
 }
-.table td, .table th {
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+table td, table th {
     border-top: none;
+    text-align: center;
 }
-.table th {
+table th {
     background-color: #212529;
     color: #f9f9f9;
     font-weight: 500;
     border-color: #212529;
+    text-transform: uppercase;
 }
-.table td {
-    text-align: center;
+table td {
     background-color: #fff;
+}
+
+@media screen and  (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        display: block;
+    }
+    table td {
+        display: block;
+        text-align: right;
+    }
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #212529;
+        padding: 1px 12px;
+        min-width: 110px;
+        text-align: left;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
 }

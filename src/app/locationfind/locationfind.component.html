@@ -19,7 +19,7 @@
             <h5><b>Address :</b><span class="pl-3">{{address}}</span></h5>
         </div>
         <div class="card-body bg-theme">
-          <table class="table m-0">
+          <!-- <table class="table m-0">
               <tbody>
                   <tr>
                     <th scope="row">Latitude :</th>
@@ -28,6 +28,20 @@
                     <td>{{longitude}}</td>
                   </tr>
               </tbody>
+          </table> -->
+          <table class="table m-0">
+            <thead>
+              <tr>
+                <th scope="col">Latitude</th>
+                <th scope="col">Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Latitude">{{latitude}}</td>
+                <td data-label="Longitude">{{longitude}}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
     </div>
